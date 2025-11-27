@@ -18,7 +18,7 @@ const resources = {
         genres: 'Genres',
         topRating: 'Top Rating',
         browseByGenre: 'Genres',
-        newReleases: 'New Releases',
+        hotPicks: 'Hot Picks',
         viewAll: 'View All',
       },
       game: {
@@ -143,7 +143,7 @@ const resources = {
         genres: 'Жанров',
         topRating: 'Топ Рейтинг',
         browseByGenre: 'Жанры',
-        newReleases: 'Новые Релизы',
+        hotPicks: 'Горячие Предложения',
         viewAll: 'Смотреть Все',
       },
       game: {

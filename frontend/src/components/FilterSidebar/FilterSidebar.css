@@ -46,6 +46,27 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xs);
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: var(--spacing-xs);
+}
+
+.filter-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.filter-list::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-md);
+}
+
+.filter-list::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.filter-list::-webkit-scrollbar-thumb:hover {
+  background: var(--color-border-hover);
 }
 
 .filter-option {

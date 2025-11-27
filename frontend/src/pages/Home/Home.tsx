@@ -58,8 +58,8 @@ export const Home = () => {
   };
 
   const featuredGames = games.slice(0, 4);
-  const newReleases = [...games]
-    .sort((a, b) => new Date(b.release_date).getTime() - new Date(a.release_date).getTime())
+  const hotPicks = [...games]
+    .sort((a, b) => b.rating - a.rating)
     .slice(0, 6);
 
   if (loading) {
@@ -158,12 +158,12 @@ export const Home = () => {
         </section>
       )}
 
-      {newReleases.length > 0 && (
+      {hotPicks.length > 0 && (
         <section className="section section-new-releases">
           <div className="container">
-            <h2 className="section-title">{t('home.newReleases')}</h2>
+            <h2 className="section-title">{t('home.hotPicks')}</h2>
             <div className="new-releases-grid">
-              {newReleases.map((game) => (
+              {hotPicks.map((game) => (
                 <Link key={game.id} to={`/game/${game.id}`} className="release-card">
                   <div className="release-image">
                     <img
@@ -173,7 +173,7 @@ export const Home = () => {
                         (e.currentTarget as HTMLImageElement).src = `https://via.placeholder.com/400x225/1a1f26/3b82f6?text=${encodeURIComponent(game.title)}`;
                       }}
                     />
-                    <div className="release-badge">NEW</div>
+                    <div className="release-badge">HOT</div>
                   </div>
                   <div className="release-info">
                     <h3 className="release-title">{game.title}</h3>
